@@ -4,7 +4,7 @@ WORKDIR /app
 RUN apk update && apk add git && apk add make
 ENV GO111MODULE=on
 RUN apk add --update gcc g++
-RUN git clone https://github.com/syhlion/gua.git &&\
+RUN git clone https://github.com/yulintsai/gua.git &&\
     cd gua &&\
     make dockerbuild/linux
 

@@ -261,7 +261,7 @@ func RegisterGroup(quene delayquene.Quene) func(w http.ResponseWriter, r *http.R
 		}
 		otp, err := quene.RegisterGroup(payload.GroupName)
 		if err != nil {
-			logger.Warnf("Error json umnarsal: %v", err)
+			logger.Warn("RegisterGroup Error ", err)
 			restresp.Write(w, err, http.StatusBadRequest)
 			return
 		}
